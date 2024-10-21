@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Apolo - Página Principal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/prueba.css">
+    <script src="js/scripts.js" defer></script>
+    <script src="js/sala.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <div class="header-nav-logo">
+                <button class="menu-btn" onclick="openMenu()">☰</button>
+                <a href="index.html">Cine Apollo</a>
+            </div>
+
+            <ul class="header-nav-menu">
+                <li>Cartelera</li>
+                <li>Pronto</li>
+                <li>Comidas</li>
+            </ul>
+
+            <div class="header-nav-menu-search">
+                <input type="text" placeholder="Buscar películas...">
+                <button>🔍</button>
+            </div>
+
+            <div class="header-nav-login">
+                <a href="login.html">Iniciar sesion</a>
+                <a href="login.html">Registrarse</a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-item"><img src="./img/dark.jpg" alt="Película 1"></div>
+            <div class="carousel-item"><img src="./img/inception.jpg" alt="Película 2"></div>
+            <div class="carousel-item"><img src="./img/interstellar.jpg" alt="Película 3"></div>
+            <div class="carousel-item"><img src="./img/matrix.jpg" alt="Película 4"></div>
+        </div>
+        <button class="carousel-button prev" aria-label="Previous">&lt;</button>
+        <button class="carousel-button next" aria-label="Next">&gt;</button>
+    </div>
+    
+    <div class="carousel-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+    </div>
+
+    <section class="filter-section">
+        <a href="index.html"><button class="filter-btn">Todas las películas</button></a>
+        <a href="hoy.html"><button class="filter-btn">Hoy</button></a>
+        <a href="proximante.html"> <button class="filter-btn">Próximamente</button></a>
+        <div class="date-select">
+            <label for="date">Seleccionar fecha:</label>
+            <select id="date">
+                <option value="none">Elegir</option>
+                <option value="2024-09-25">25 Sep 2024</option>
+                <option value="2024-09-26">26 Sep 2024</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="movies">
+        <div class="movies">
+            <div class="movie-grid">
+                <div class="movie">
+                    <a href="#inception">
+                        <div class="poster">
+                            <img src="img/inception.jpg" alt="Cartel de la película Inception">
+                        </div>
+                        <h3>Inception</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#darkKnight">
+                        <div class="poster">
+                            <img src="img/dark.jpg" alt="Cartel de la película The Dark Knight">
+                        </div>
+                        <h3>The Dark Knight</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#interstellar">
+                        <div class="poster">
+                            <img src="img/interstellar.jpg" alt="Cartel de la película Interstellar">
+                        </div>
+                        <h3>Interstellar</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#matrix">
+                        <div class="poster">
+                            <img src="img/matrix.jpg" alt="Cartel de la película The Matrix">
+                        </div>
+                        <h3>The Matrix</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#redemption">
+                        <div class="poster">
+                            <img src="img/redemption.jpg" alt="Cartel de la película The Shawshank Redemption">
+                        </div>
+                        <h3>The Shawshank Redemption</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="#pulpFiction">
+                        <div class="poster">
+                            <img src="img/pulp.jpg" alt="Cartel de la película Pulp Fiction">
+                        </div>
+                        <h3>Pulp Fiction</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h4>Películas</h4>
+                <a href="#">Acción</a><br>
+                <a href="#">Comedia</a><br>
+                <a href="#">Drama</a><br>
+            </div>
+            <div>
+                <h4>Eventos</h4>
+                <a href="#">Conciertos</a><br>
+                <a href="#">Teatro</a><br>
+                <a href="#">Deportes</a><br>
+            </div>
+            <div>
+                <h4>Sobre nosotros</h4>
+                <a href="contacto.html">Contacto</a><br>
+                <a href="#">Trabaja con nosotros</a><br>
+                <a href="#">Política de privacidad</a><br>
+            </div>
+            <div>
+                <h4>Síguenos en</h4>
+                <a href="#">Facebook</a><br>
+                <a href="#">Twitter</a><br>
+                <a href="#">Instagram</a><br>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = Array.from(track.children);
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+    
+        const updateCarousel = (index) => {
+            const width = items[index].getBoundingClientRect().width;
+            track.style.transform = 'translateX(-' + (width * index) + 'px)';
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        };
+    
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel(currentIndex);
+        });
+    
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel(currentIndex);
+        });
+    
+        indicators.forEach((indicator, i) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = i;
+                updateCarousel(currentIndex);
+            });
+        });
+    
+        // Auto-slide feature
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel(currentIndex);
+        }, 5000); 
+    </script>
+</body>
+
+</html>

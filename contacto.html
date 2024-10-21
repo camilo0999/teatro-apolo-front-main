@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Apolo - Página Principal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/contacto.js" defer></script>
+</head>
+
+<body>
+    <!-- Menú lateral desplegable -->
+    <div id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="/">Cartelera</a>
+        <a href="/">Sesiones Hoy</a>
+        <a href="/">Próximamente</a>
+    </div>
+
+    <header>
+        <div class="top-menu">
+            <button class="menu-btn" onclick="openMenu()">☰ Menú</button>
+            <div class="logo">Logo</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar películas...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <button class="login-btn">Entrar</button>
+        </div>
+    </header>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form id="contact-form" action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto" required>
+                <option value="">Selecciona un motivo</option>
+                <option value="trabaja-con-nosotros">Trabaja con nosotros</option>
+                <option value="objetos-perdidos">Objetos perdidos</option>
+                <option value="empresas">Empresas</option>
+            </select>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <label for="archivo">Archivo adjunto:</label>
+            <input type="file" id="archivo" name="archivo">
+
+            <div>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">He leído y acepto la política de privacidad.</label>
+            </div>
+
+            <button id="submit-btn" type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h4>Películas</h4>
+                <a href="#">Acción</a><br>
+                <a href="#">Comedia</a><br>
+                <a href="#">Drama</a><br>
+            </div>
+            <div>
+                <h4>Eventos</h4>
+                <a href="#">Conciertos</a><br>
+                <a href="#">Teatro</a><br>
+                <a href="#">Deportes</a><br>
+            </div>
+            <div>
+                <h4>Sobre nosotros</h4>
+                <a href="#">Contacto</a><br>
+                <a href="#">Trabaja con nosotros</a><br>
+                <a href="#">Política de privacidad</a><br>
+            </div>
+            <div>
+                <h4>Síguenos en</h4>
+                <a href="#">Facebook</a><br>
+                <a href="#">Twitter</a><br>
+                <a href="#">Instagram</a><br>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
