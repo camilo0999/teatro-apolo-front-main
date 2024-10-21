@@ -118,54 +118,131 @@ body {
 
 /* Estilos de la Sección de Filtros */
 .filter-section {
-    padding: 15px;
-    background-color: #eee;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-top: 25px;
+    padding: 15px; 
+    background-color: #eee; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.filter-btn, .date-select select {
-    padding: 10px 15px;
-    border: 1px solid #3498db;
-    background-color: white;
-    cursor: pointer;
+.filter-btn {
+    padding: 10px 15px; /* Espaciado interno */
+    border: 1px solid blue; /* Borde azul */
+    background-color: white; /* Color de fondo blanco */
+    color: blue; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de puntero al pasar el ratón */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
 }
+
+.filter-btn:hover {
+    background-color: blue; /* Color de fondo azul al pasar el ratón */
+    color: white; /* Cambiar el color del texto al pasar el ratón */
+}
+
+.date-select {
+    display: flex; /* Usar flexbox para alinear la etiqueta y el selector */
+    align-items: center; /* Centrar verticalmente la etiqueta y el selector */
+}
+
+.date-select label {
+    margin-right: 10px; 
+    font-weight: bold; 
+    font-size: 1.1rem;
+}
+
+.date-select select {
+    padding: 10px; /* Espaciado interno del selector */
+    border: 1px solid blue; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: white; /* Color de fondo blanco */
+    cursor: pointer; /* Cursor en forma de puntero */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.date-select select:hover {
+    border-color: blue; /* Cambiar el color del borde al pasar el ratón */
+}
+
 
 /* Estilos de las Películas */
 .movies {
     padding: 20px;
-    text-align: center;
+    background-color: #f8f9fa; 
 }
 
 .movie-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px; 
 }
 
 .movie {
     background-color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    margin: 10px;
+    border: 1px solid #ddd; 
+    overflow: hidden; 
+    transition: transform 0.3s; 
 }
 
-.poster {
-    width: 100%;
-    height: 250px;
-    background-color: #ddd;
-    margin-bottom: 10px;
+.movie:hover {
+    transform: scale(1.2); 
 }
 
 .poster img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
 }
+
+.title {
+    text-align: center; 
+    padding: 10px 0; 
+    color: #333; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+.reparto {
+    text-align: left; 
+    padding: 10px 0; 
+    color: #777; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+.director {
+    text-align: left; 
+    padding: 10px 0; 
+    color: #777; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+.duracion {
+    text-align: left; 
+    padding: 10px 0; 
+    color: #777; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+.fecha {
+    text-align: left; 
+    padding: 10px 0; 
+    color: #777; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+
+/* Estilos de la Sección de Contacto */
 
 
 /* Formulario de contacto */
