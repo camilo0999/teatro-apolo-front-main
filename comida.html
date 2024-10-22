@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine Apolo - Página Principal</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/sala.js" defer></script>
+    <title>Cine Apollo - Comidas</title>
 </head>
-
 <body>
     <header class="header">
         <nav class="header-nav">
@@ -68,93 +65,51 @@
         <div class="indicator"></div>
     </div>
 
-    <section class="filter-section">
-        <a href="index.html"><button class="filter-btn">Todas las películas</button></a>
-        <a href="hoy.html"><button class="filter-btn">Hoy</button></a>
-        <a href="proximante.html"> <button class="filter-btn">Próximamente</button></a>
-         <div class="date-select">
-             <label for="date">Seleccionar fecha:</label>
-             <select id="date">
-                 <option value="none">Elegir</option>
-                 <option value="2024-09-25">25 Sep 2024</option>
-                 <option value="2024-09-26">26 Sep 2024</option>
-             </select>
-         </div>
-     </section>
-
-    <section class="movies">
-        <div class="movies">
-            <div class="movie-grid">
-                <div class="movie">
-                    <a href="#inception">
-                        <div class="poster">
-                            <img src="img/inception.jpg" alt="Cartel de la película Inception">
-                        </div>
-                        <div>
-                            <h3 class="title">Inception</h3>
-                           
-                        </div>
-                    </a>
+     <!-- Comidas Section -->
+     <main>
+        <section class="comidas">
+            <h2>Comidas y Snacks</h2>
+            <div class="comidas-grid">
+                <!-- Popcorn -->
+                <div class="comida-item">
+                    <img src="./img/Crispeta Grande.jpg" alt="Palomitas de Maíz">
+                    <h3>Palomitas de Maíz</h3>
+                    <p>Tamaño pequeño: $5.000 COP</p>
+                    <p>Tamaño mediano: $8.000 COP</p>
+                    <p>Tamaño grande: $12.000 COP</p>
                 </div>
-                <div class="movie">
-                    <a href="#darkKnight">
-                        <div class="poster">
-                            <img src="img/dark.jpg" alt="Cartel de la película The Dark Knight">
-                        </div>
-                        <div>
-                            <h3 class="title">The Dark Knight</h3>
-                            
-                        </div>
-                    </a>
+                <!-- Hot Dogs -->
+                <div class="comida-item">
+                    <img src="./img/hotdog.jpeg" alt="Hot Dogs">
+                    <h3>Hot Dogs</h3>
+                    <p>Clásico: $10.000 COP</p>
+                    <p>Con queso: $12.000 COP</p>
                 </div>
-                <div class="movie">
-                    <a href="#interstellar">
-                        <div class="poster">
-                            <img src="img/interstellar.jpg" alt="Cartel de la película Interstellar">
-                        </div>
-                        <div>
-                            <h3 class="title">Interstellar</h3>
-                            
-                        </div>
-                    </a>
+                <!-- Nachos -->
+                <div class="comida-item">
+                    <img src="./img/nachos.jpeg" alt="Nachos con Queso">
+                    <h3>Nachos con Queso</h3>
+                    <p>Con salsa de queso y jalapeños: $15.000 COP</p>
                 </div>
-                <div class="movie">
-                    <a href="#matrix">
-                        <div class="poster">
-                            <img src="img/matrix.jpg" alt="Cartel de la película The Matrix">
-                        </div>
-                        <div>
-                            <h3 class="title">The Matrix</h3>
-                            
-                        </div>
-                    </a>
+                <!-- Bebidas -->
+                <div class="comida-item">
+                    <img src="./img/bebida.png" alt="Bebidas">
+                    <h3>Bebidas</h3>
+                    <p>Refresco pequeño: $4.000 COP</p>
+                    <p>Refresco mediano: $6.000 COP</p>
+                    <p>Refresco grande: $8.000 COP</p>
                 </div>
-                <div class="movie">
-                    <a href="#redemption">
-                        <div class="poster">
-                            <img src="img/redemption.jpg" alt="Cartel de la película The Shawshank Redemption">
-                        </div>
-                        <div>
-                            <h3 class="title">The Shawshank Redemption</h3>
-                            
-                        </div>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="#pulpFiction">
-                        <div class="poster">
-                            <img src="img/pulp.jpg" alt="Cartel de la película Pulp Fiction">
-                        </div>
-                        <div>
-                            <h3 class="title">Pulp Fiction</h3>
-                
-                        </div>
-                    </a>
+                <!-- Combo -->
+                <div class="comida-item">
+                    <img src="./img/combo.jpeg" alt="Combo Familiar">
+                    <h3>Combo Familiar</h3>
+                    <p>Palomitas grandes + 2 bebidas: $20.000 COP</p>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+
 
     <footer>
         <div class="footer-links">
@@ -187,5 +142,4 @@
 
     <script src="js/scripts.js"></script>
 </body>
-
 </html>

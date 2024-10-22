@@ -60,8 +60,8 @@ body {
     color: white;
 }
 
-.header-nav-menu li {
-    list-style: none;
+.header-nav-menu a {
+    text-decoration: none;
     cursor: pointer;
     background-color: blue;
     color: white; 
@@ -70,7 +70,11 @@ body {
     transition: background-color 0.3s ease; 
 }
 
-.header-nav-menu li:hover {
+.header-nav-menu li {
+    list-style: none;
+}
+
+.header-nav-menu a:hover {
     background-color: darkblue; 
 }
 
@@ -241,6 +245,65 @@ body {
     text-transform: uppercase;
 }
 
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu h3{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-menu li {
+    padding: 10px 20px;
+}
+
+.sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+}
+
+.sidebar-menu li a:hover {
+    background-color: blue;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Transition for opening and closing */
+.sidebar.open {
+    width: 250px;
+}
+
 
 /* Estilos de la Sección de Contacto */
 
@@ -398,7 +461,7 @@ footer a:hover {
 .carousel {
     position: relative;
     width: 100%; /* Cambiado a 100% */
-    height: 60vh; /* Altura de 40vh */
+    height: 50vh; /* Altura de 40vh */
     margin: auto;
     overflow: hidden;
 }
@@ -463,4 +526,80 @@ footer a:hover {
 
 .active {
     background-color: black;
+}
+
+/* Comidas main styles */
+
+
+/* Estilos para la sección de comidas */
+.comidas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+}
+
+.comidas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Grid para organizar los elementos de comida */
+.comidas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Estilos para cada comida */
+.comida-item {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+}
+
+.comida-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de cada comida */
+.comida-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* Título de la comida */
+.comida-item h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+/* Descripción de la comida (precios) */
+.comida-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.comida-item p:nth-child(3),
+.comida-item p:nth-child(4),
+.comida-item p:nth-child(5) {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .comidas-grid {
+        grid-template-columns: 1fr;
+    }
 }

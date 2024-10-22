@@ -10,13 +10,6 @@
 </head>
 
 <body>
-    <!-- Menú lateral desplegable -->
-    <div id="side-menu" class="side-menu">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
-        <a href="/">Cartelera</a>
-        <a href="/">Sesiones Hoy</a>
-        <a href="/">Próximamente</a>
-    </div>
 
     <header>
         <div class="top-menu">
@@ -29,6 +22,20 @@
             <button class="login-btn">Entrar</button>
         </div>
     </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <ul class="sidebar-menu">
+            <h3>Cine Apollo</h3>
+            <li><a href="#">Cartelera</a></li>
+            <li><a href="#">Pronto</a></li>
+            <li><a href="#">Comidas</a></li>
+            <li><a href="login.html">Iniciar sesión</a></li>
+            <li><a href="login.html">Registrarse</a></li>
+        </ul>
+    </aside>
 
     <!-- Formulario de contacto -->
     <section id="contacto">

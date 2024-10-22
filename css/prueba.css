@@ -54,8 +54,8 @@ body {
     color: white;
 }
 
-.header-nav-menu li {
-    list-style: none;
+.header-nav-menu a {
+    text-decoration: none;
     cursor: pointer;
     background-color: blue;
     color: white; 
@@ -64,7 +64,7 @@ body {
     transition: background-color 0.3s ease; 
 }
 
-.header-nav-menu li:hover {
+.header-nav-menu a:hover {
     background-color: darkblue; 
 }
 
